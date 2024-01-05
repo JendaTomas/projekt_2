@@ -33,7 +33,7 @@ def correct_entry():
         global guess_number
         guess_number=input(">>> ")
         if len(guess_number) != 4 or not guess_number.isnumeric():
-            print("Tebou zadané číslo musí obsahovat právě 4 číslice!")
+            print("The number you entered must contain exactly 4 digits!")
             continue
         elif guess_number[0] == str(0):
             print("Číslo nesmí začínat nulou!")
