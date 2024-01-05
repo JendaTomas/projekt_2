@@ -33,13 +33,13 @@ def correct_entry():
         global guess_number
         guess_number=input(">>> ")
         if len(guess_number) != 4 or not guess_number.isnumeric():
-            print("The number you entered must contain exactly 4 digits!")
+            print("The number you entered have to contain exactly 4 digits!")
             continue
         elif guess_number[0] == str(0):
-            print("Číslo nesmí začínat nulou!")
+            print("The number can not start with zero! ")
             continue
         elif guess_number.isnumeric() and len(set(guess_number)) != 4:  # poznámka pro mne: set vyřadí opakující se hodnoty -> když v 4 číslech je více stejných
-            print("Tebou zadané číslo musí obsahovat 4 různé číslice!")   # čísel, jeho délka nebude 4
+            print("The number you entered have to contain 4 different digits!")   # čísel, jeho délka nebude 4
             continue                                                              
         else:
             break                                                                           
