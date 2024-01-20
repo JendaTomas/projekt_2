@@ -74,9 +74,10 @@ quantity_bulls = 0
 while quantity_bulls != len(random_number):
     guess_number=input(">>> ")
     number_rounds += 1
-    correct_entry(guess_number)
-    quantity_of_bulls_cows()
-    suffixword()
+    if correct_entry(guess_number) == False:
+        continue
+    quantity_bulls, quantity_cows = quantity_of_bulls_cows(random_number, guess_number)
+    name_bull, name_cow = suffixword(quantity_bulls, quantity_cows)
     print( f"{quantity_bulls} {name_bull}, {quantity_cows} {name_cow}")
 else:
     print(f"""Correct, you´ve guessed the right number
