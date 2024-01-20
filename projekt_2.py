@@ -43,7 +43,7 @@ def quantity_of_bulls_cows(random_number, guess_number):
     return quantity_bulls, quantity_cows
 
 # plural/singular nouns
-def suffixword():
+def suffixword(quantity_bulls, quantity_cows):
     """
     správná koncovka u jednotného a množného čísla
 
@@ -54,6 +54,7 @@ def suffixword():
         name_bull = name_bull[:-1] 
     if quantity_cows == 1:
         name_cow= name_cow[:-1]
+    return name_bull, name_cow
 
 # the game
 ### greeting and introduction
