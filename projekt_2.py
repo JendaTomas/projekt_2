@@ -8,21 +8,7 @@ discord: jendatomas
 
 import random
         
-### greeting and introduction
-line= 47*"-"
-print(f"Hit there!\n{line}\n",
-      "I´ve generated a random 4 digit number for you.\n",
-      f"Let´s play a bulls and cows game.\n{line}\n",
-      f"Enter a number:\n {line}\n")
 
-### random "number"(list) generation
-number= [0,1,2,3,4,5,6,7,8,9]
-random_number=[0]
-while random_number[0]==0:
-    random_number= random.sample(number,4)
-
-
-### guessing game
 # conditions for number
 def correct_entry():
     """
@@ -76,6 +62,18 @@ def suffixword():
         name_cow= name_cow[:-1]
 
 # the game
+### greeting and introduction
+line= 47*"-"
+print(f"Hit there!\n{line}\n",
+      "I´ve generated a random 4 digit number for you.\n",
+      f"Let´s play a bulls and cows game.\n{line}\n",
+      f"Enter a number:\n {line}\n")
+
+### random "number"(list) generation
+number= [0,1,2,3,4,5,6,7,8,9]
+random_number=[0]
+while random_number[0]==0:
+    random_number= random.sample(number,4)
 number_rounds = 0
 quantity_bulls = 0
 while quantity_bulls != len(random_number):
