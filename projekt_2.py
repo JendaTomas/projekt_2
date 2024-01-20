@@ -16,7 +16,6 @@ def correct_entry():
      
     """
     while True:
-        global guess_number
         guess_number=input(">>> ")
         if len(guess_number) != 4 or not guess_number.isnumeric():
             print("The number you entered have to contain exactly 4 digits!")
@@ -36,8 +35,6 @@ def quantity_of_bulls_cows():
     vyhodnocuje počet bulls a cows
 
     """
-    global quantity_bulls
-    global quantity_cows
     quantity_cows = 0
     quantity_bulls = 0
     for i in range(0,4):
@@ -52,8 +49,6 @@ def suffixword():
     správná koncovka u jednotného a množného čísla
 
     """
-    global name_bull
-    global name_cow
     name_bull = "bulls"
     name_cow = "cows"
     if quantity_bulls == 1:
