@@ -17,15 +17,15 @@ def correct_entry(guess_number):
     """
         if len(guess_number) != 4 or not guess_number.isnumeric():
             print("The number you entered have to contain exactly 4 digits!")
-            continue
+            return False
         elif guess_number[0] == str(0):
             print("The number can not start with zero! ")
-            continue
+            return False
         elif guess_number.isnumeric() and len(set(guess_number)) != 4:  # poznámka pro mne: set vyřadí opakující se hodnoty -> když v 4 číslech je více stejných
             print("The number you entered have to contain 4 different digits!")   # čísel, jeho délka nebude 4
-            continue                                                              
+            return False                                                             
         else:
-            break                                                                           
+            return True                                                                           
 
 # number of bulls
 def quantity_of_bulls_cows():
@@ -72,7 +72,7 @@ quantity_bulls = 0
 while quantity_bulls != len(random_number):
     guess_number=input(">>> ")
     number_rounds += 1
-    correct_entry()
+    correct_entry(guess_number)
     quantity_of_bulls_cows()
     suffixword()
     print( f"{quantity_bulls} {name_bull}, {quantity_cows} {name_cow}")
