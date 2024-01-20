@@ -28,7 +28,7 @@ def correct_entry(guess_number):
             return True                                                                           
 
 # number of bulls
-def quantity_of_bulls_cows():
+def quantity_of_bulls_cows(random_number, guess_number):
     """
     vyhodnocuje počet bulls a cows
 
@@ -40,6 +40,7 @@ def quantity_of_bulls_cows():
             quantity_bulls += 1
         elif int(guess_number[i]) in random_number:
             quantity_cows += 1
+    return quantity_bulls, quantity_cows
 
 # plural/singular nouns
 def suffixword():
