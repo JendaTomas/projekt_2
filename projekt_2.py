@@ -10,13 +10,11 @@ import random
         
 
 # conditions for number
-def correct_entry():
+def correct_entry(guess_number):
     """
     kontroluje, zda zadané číslo splňuje podmínky
      
     """
-    while True:
-        guess_number=input(">>> ")
         if len(guess_number) != 4 or not guess_number.isnumeric():
             print("The number you entered have to contain exactly 4 digits!")
             continue
@@ -72,6 +70,7 @@ while random_number[0]==0:
 number_rounds = 0
 quantity_bulls = 0
 while quantity_bulls != len(random_number):
+    guess_number=input(">>> ")
     number_rounds += 1
     correct_entry()
     quantity_of_bulls_cows()
