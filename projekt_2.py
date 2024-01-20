@@ -15,16 +15,16 @@ def correct_entry(guess_number):
     kontroluje, zda zadané číslo splňuje podmínky
      
     """
-        if len(guess_number) != 4 or not guess_number.isnumeric():
+    if len(guess_number) != 4 or not guess_number.isnumeric():
             print("The number you entered have to contain exactly 4 digits!")
             return False
-        elif guess_number[0] == str(0):
+    elif guess_number[0] == str(0):
             print("The number can not start with zero! ")
             return False
-        elif guess_number.isnumeric() and len(set(guess_number)) != 4:  # poznámka pro mne: set vyřadí opakující se hodnoty -> když v 4 číslech je více stejných
+    elif guess_number.isnumeric() and len(set(guess_number)) != 4:  # poznámka pro mne: set vyřadí opakující se hodnoty -> když v 4 číslech je více stejných
             print("The number you entered have to contain 4 different digits!")   # čísel, jeho délka nebude 4
             return False                                                             
-        else:
+    else:
             return True                                                                           
 
 # number of bulls
